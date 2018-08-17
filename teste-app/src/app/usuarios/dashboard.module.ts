@@ -5,11 +5,14 @@ import { UsuariosComponent } from "./usuarios.component";
 import { UsuariosService } from "./usuarios.service";
 import { UsuarioFormComponent } from './usuario-form/usuario-form.component';
 import { IndexComponent } from './index/index.component';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 @NgModule({
     imports:[
         CommonModule,
         RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     declarations:[
         UsuariosComponent,

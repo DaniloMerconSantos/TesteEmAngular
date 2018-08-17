@@ -17,7 +17,17 @@ export class UsuariosComponent implements OnInit {
   }
 
   carregarLista(): void {
-    this.usuarioService.list().subscribe(data => this.usuarios = data);
+    if(!localStorage.getItem('Usuarios')) {
+      this.usuarioService.list().subscribe(data => {
+        localStorage.setItem('Usuarios', JSON.stringify(data));
+        this.usuarios =  data;
+      },
+      err=> {
+        console.log("Error occured.")
+      });
+    } else {
+      this.usuarios = JSON.parse(localStorage.getItem('Usuarios'));     
+    }
   }
 
 }
