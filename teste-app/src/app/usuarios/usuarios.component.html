@@ -1,0 +1,37 @@
+<div class="main ui container">
+  <h2 class="ui dividing header">Usuários</h2>
+  <div class="ui raised segments">
+    <table class="ui single line table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cpf</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+      <tbody class="usuario">
+        <tr *ngFor="let usr of usuarios">
+          <td>{{usr.name}}</td>
+          <td>{{usr.cpf}}</td>
+          <td>{{usr.email}}</td>
+          <td>{{usr.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+ 
+<!-- <div *ngIf="selectedHero">
+ 
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+ 
+</div> -->
